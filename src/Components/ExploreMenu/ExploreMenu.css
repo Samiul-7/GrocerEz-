@@ -43,3 +43,9 @@
 .explore-menu-list-item p:hover {
     color: #333333;
 }
+.explore-menu-list-item .active{
+    border: 4px solid tomato;
+    padding: 2px;
+
+
+}
