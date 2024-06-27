@@ -1,11 +1,12 @@
-.header{
-    height:34vw;
-    margin: 30px auto;
-    background: url('/public/hd_bg.jpg') no-repeat;
+.header {
+    height: 100vh; /* Full viewport height */
+    margin: 0; /* Remove margin */
+    background: url('/public/hd_bg.jpg') no-repeat center center;
     background-size: cover;
     position: relative;
     overflow: hidden;
 }
+
 .header-contents {
     position: absolute;
     display: flex;
@@ -17,7 +18,7 @@
     left: 6vw;
     animation: fadeIn 3s;
     padding: 20px;
-    background: rgba(0, 0, 0, 0.5); /* Added semi-transparent background */
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
     border-radius: 10px; /* Rounded corners */
 }
 

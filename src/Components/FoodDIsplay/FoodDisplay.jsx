@@ -8,7 +8,7 @@ const FoodDisplay =({catagory}) => {
     return(
         <div className='food-display' id='food-display'>
             <h2>
-                Top items near you
+                Our products
                 
             </h2>
             <div className="food_display_list">

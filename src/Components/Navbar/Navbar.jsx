@@ -1,31 +1,35 @@
-import React, { useState } from 'react'
-import './Navbar.css'
-import { assets } from '../../assets/image'
+import React, { useState } from 'react';
+import { useNavigate, useLocation } from 'react-router-dom';
+import './Navbar.css';
+import { assets } from '../../assets/image';
 
 const Navbar = () => {
+    const [menu, setMenu] = useState("home");
+    const navigate = useNavigate();
+    const location = useLocation();
 
-    const [menu,setMenu]=useState("home");
+    const handleSearchClick = () => {
+        navigate('/search');
+    };
 
-  return (
-    <div className='navbar'>
-       <img src={assets.lo_go2} alt="" className="logo"/>
-        <ul className="navbar-menu">
-            <li onClick={()=>setMenu("home")}className={menu==="home"?"active":""}>home</li>
-            <li onClick={()=>setMenu("menu")}className={menu==="menu"?"active":""}>menu</li>
-            <li onClick={()=>setMenu("mobile-app")}className={menu==="mobile-app"?"active":""}>mobile-app</li>
-            <li onClick={()=>setMenu("contact-us")}className={menu==="contact-us"?"active":""}>contact-us</li>
-        </ul>
-        <div className="navbar-right">
-            <img src={assets.searchicon} alt="" />
-            <div className="navbar-search-icon">
-                <img src={assets.basketicon} alt="" />
-                <div className="dot"></div>
+    const handleHomeClick = () => {
+        navigate('/home');
+    };
+
+    return (
+        <div className='navbar'>
+            <img src={assets.lo_go2} alt="logo" className="logo" />
+            <div className="navbar-right">
+                <img src={assets.searchicon} alt="search" onClick={handleSearchClick} />
+                <img src={assets.home} alt="home" onClick={handleHomeClick} />
+                <div className="navbar-search-icon">
+                    <img src={assets.basketicon1} alt="basket" />
+                    <div className="dot"></div>
+                </div>
+                <button>sign in</button>
             </div>
-            <button>sign in</button>
         </div>
-    </div>
-  )
+    );
 }
 
-export default Navbar
-
+export default Navbar;

@@ -1,59 +1,74 @@
-.navbar{
-    padding: 20px 0px;
+.navbar {
+    padding: 20px 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    background-color: #eef1f3; /* Blue background */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
 }
-.navbar .logo{
+
+.navbar .logo {
     width: 150px;
 }
-.navbar-menu{
+
+.navbar-menu {
     display: flex;
     list-style: none;
     gap: 20px;
-    color: #49557e;
+    color: #ffffff; /* White text */
     font-size: 18px;
 }
-.navbar-right{
+
+.navbar-right {
     display: flex;
     align-items: center;
     gap: 40px;
 }
 
-.navbar button{
-    background: transparent;
+.navbar button {
+    background: linear-gradient(45deg, #ff6b6b, #f06595); /* Gradient background */
     font-size: 16px;
-    color: #49557e;
-    border: 1px solid tomato;
+    color: #ffffff; /* White text */
+    border: none; /* Removed border */
     padding: 10px 30px;
-    border-radius: 50px;
+    border-radius: 25px; /* More rounded corners */
     cursor: pointer;
-    transition: 0.3;
+    transition: background-color 0.3s, transform 0.3s; /* Smooth transition */
 }
 
-.navbar button:hover{
-    background-color: #fff4f2;
+.navbar button:hover {
+    background-color: #ff4d4d; /* Darker red on hover */
+    transform: translateY(-2px); /* Lift effect on hover */
 }
 
-.navbar .active{
+.navbar .active {
     padding-bottom: 2px;
-    border-bottom: 2px solid #49557e;
+    border-bottom: 2px solid #ffffff; /* White underline */
 }
 
-.navbar li{
+.navbar li {
     cursor: pointer;
 }
 
-.navbar-search-icon{
+.navbar-search-icon {
     position: relative;
 }
 
-.navbar-search-icon .dot{
+.navbar-search-icon .dot {
     position: absolute;
     min-width: 10px;
     min-height: 10px;
-    background-color: tomato;
-    border-radius: 5px;
+    background-color: #ff6b6b; /* Matching gradient color */
+    border-radius: 50%;
     top: -8px;
     right: -8px;
+}
+
+.navbar img {
+    cursor: pointer;
+    transition: transform 0.3s; /* Smooth transition */
+}
+
+.navbar img:hover {
+    transform: scale(1.1); /* Slightly larger on hover */
 }
