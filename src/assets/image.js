@@ -40,6 +40,7 @@ import chips from './chips.png'
 import soup from './soup.png'
 import home from './home.png'
 import basketicon1 from './basket_icon1.png'
+import form from './form-18.png'
 
 export const assets = {
   basketicon1,
@@ -76,7 +77,8 @@ export const assets = {
   logo,
   facebook_icon,
   twitter_icon,
-  linkedin_icon
+  linkedin_icon,
+  form
 };
 
 export const menu_list=[

@@ -17,7 +17,7 @@ export const Footer = () => {
           </div>
         </div>
         <div className="footer-content-center">
-          <h2>Company</h2>
+          <h2>Explore</h2>
           <ul>
             <li>Home</li>
             <li>About us</li>
@@ -26,7 +26,7 @@ export const Footer = () => {
           </ul>
         </div>
         <div className="footer-content-right">
-            <h2>GET IN TOUCH</h2>
+            <h2>Contact us</h2>
             <ul>
                 <li>01983716969 </li>
                 <li>Grocerez@gmail.com</li>
@@ -34,7 +34,7 @@ export const Footer = () => {
         </div>
       </div>
       <hr />
-      <p className='footer-copyrights'>copyrights 2024 c Grocerez.com - All Rights Reserved.</p>
+      {/* <p className='footer-copyrights'>copyrights 2024 c Grocerez.com - All Rights Reserved.</p> */}
     </div>
   );
 }
