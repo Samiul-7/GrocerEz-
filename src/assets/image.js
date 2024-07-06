@@ -41,8 +41,10 @@ import soup from './soup.png'
 import home from './home.png'
 import basketicon1 from './basket_icon1.png'
 import form from './form-18.png'
+import cross_icon from './cross_icon.png'
 
 export const assets = {
+  cross_icon,
   basketicon1,
   home,
   soup,
