@@ -18,7 +18,7 @@ const Cart = () => {
         </div>
         <br />
         <hr />
-        {/* #############################################################shob food_list er jaiagai All_products use korte hobe######################################### */}
+        {/* #############################################################shob food_list er jaiagai All_products use korte hobe## */}
         {All_products.map((item, index) => {
           if (cartItems[item._id] > 0) {
             return (
