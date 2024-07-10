@@ -42,8 +42,14 @@ import home from './home.png'
 import basketicon1 from './basket_icon1.png'
 import form from './form-18.png'
 import cross_icon from './cross_icon.png'
+import profile_icon from './profile_icon.png'
+import bag_icon from './bag_icon.png'
+import logout_icon from './logout_icon.png'
 
 export const assets = {
+  logout_icon,
+  bag_icon,
+  profile_icon,
   cross_icon,
   basketicon1,
   home,
