@@ -5,7 +5,7 @@ export const StoreContext = createContext(null)
 const StoreContextProvider = (props) => {
 
     const [cartItems, setCartItems] = useState({});
-    const url= "https://grocer-ez-nine.vercel.app";
+    const url= "http://localhost:4000";
     const [token,setToken]= useState("");
 
     const addToCart = async (itemId) => {
@@ -33,10 +33,10 @@ const StoreContextProvider = (props) => {
 
     useEffect(()=>{
         async function loadData() {
-            // await fetchFoodList();
+             await fetchFoodList();
             if (localStorage.getItem("token")) {
                 setToken(localStorage.getItem("token"));
-                // await loadCartData(localStorage.getItem("token"));
+                 await loadCartData(localStorage.getItem("token"));
             }
         }
         loadData();
