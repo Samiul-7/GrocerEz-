@@ -91,7 +91,7 @@ export const assets = {
 
 export const menu_list=[
   {
-    menu_name: "Dairy Products",
+    menu_name: "Dairy products",
     menu_image: menu_1
   },
   {
@@ -107,7 +107,7 @@ export const menu_list=[
     menu_image: menu_4
   },
 ]
-export const All_products = [
+export const food_list = [
   {
     _id: "1",
     name: "Apple",
