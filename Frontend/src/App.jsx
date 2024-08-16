@@ -9,6 +9,7 @@ import HeaderPage from './pages/HeaderPage/HeaderPage'
 import SearchPage from './Components/SearchPage/SearchPage';
 import FormPage from './pages/FormPage/FormPage'
 import LoginPopup from './Components/LoginPopup/LoginPopup'
+import OrderConfirmation from './Components/OrderConfirmation/OrderConfirmation'
 const App = () => {
   const location = useLocation();
   const showNavbarAndFooter = location.pathname !== '/';
@@ -26,6 +27,7 @@ const App = () => {
           <Route path='/home' element={<Home />} />
           <Route path='/cart' element={<Cart />} />
           <Route path='/order' element={<PlaceOrder />} />
+          <Route path="/order-confirmation" element={<OrderConfirmation />} />
         </Routes>
       </div>
       {showNavbarAndFooter && <Footer />}

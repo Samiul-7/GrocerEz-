@@ -38,7 +38,7 @@ const Navbar = ({setShowLogin}) => {
 
     return (
         <div className='navbar'>
-            <img src={assets.lo_go2} alt="logo" className="logo" />
+            <img src={assets.lo_go2} alt="logo" onClick={handleHomeClick} className="logo" />
             <div className="navbar-right">
                 <img src={assets.searchicon} alt="search" onClick={handleSearchClick} />
                 <img src={assets.form} alt="form" onClick={handleFormClick} /> 
@@ -51,8 +51,8 @@ const Navbar = ({setShowLogin}) => {
                 :<div className='navbar-profile'>
                     <img src={assets.profile_icon} alt="" />
                     <ul className="nav-profile-dropdown">
-                        <li><img src={assets.bag_icon} alt="" /><p>Orders</p></li>
-                        <hr/>
+                        {/* <li><img src={assets.bag_icon} alt="" /><p>Orders</p></li>
+                        <hr/> */}
                         <li onClick={logout}><img src={assets.logout_icon} alt="" /><p>Logout</p></li>
                     </ul>
                 </div>}

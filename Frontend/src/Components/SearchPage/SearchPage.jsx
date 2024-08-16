@@ -1,12 +1,17 @@
-import React, { useState } from 'react';
-import { dataset } from '../../assets/image'; 
+import React, { useState, useContext } from 'react';
 import './SearchPage.css';
+import { StoreContext } from "../../context/StoreContext";
+import FoodItems from '../FoodItems/FoodItems';
 
 const SearchPage = () => {
     const [searchTermByName, setSearchTermByName] = useState('');
     const [searchTermByDescription, setSearchTermByDescription] = useState('');
 
-    const filteredDataset = dataset.filter(item =>
+    // Get the food_list from StoreContext
+    const { food_list } = useContext(StoreContext);
+
+    // Filter the food_list based on search terms
+    const filteredData = food_list.filter(item =>
         (searchTermByName === '' || item.name.toLowerCase().includes(searchTermByName.toLowerCase())) &&
         (searchTermByDescription === '' || item.description.toLowerCase().includes(searchTermByDescription.toLowerCase()))
     );
@@ -30,30 +35,21 @@ const SearchPage = () => {
                     className="search-input"
                 />
             </div>
-            <div className="table-container">
-                <table className="table">
-                    <thead>
-                        <tr>
-                            <th>Image</th>
-                            <th>Name</th>
-                            <th>Description</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        {filteredDataset.map(item => (
-                            <tr key={item.id}>
-                                <td><img src={item.image} alt={item.name} className="item-image" /></td>
-                                <td>{item.name}</td>
-                                <td>{item.description}</td>
-                            </tr>
-                        ))}
-                        {filteredDataset.length === 0 && (
-                            <tr>
-                                <td colSpan="3">No results found.</td>
-                            </tr>
-                        )}
-                    </tbody>
-                </table>
+            <div className="food-items-container">
+                {filteredData.length > 0 ? (
+                    filteredData.map(item => (
+                        <FoodItems
+                            key={item._id}
+                            id={item._id}
+                            name={item.name}
+                            description={item.description}
+                            price={item.price}
+                            image={item.image}
+                        />
+                    ))
+                ) : (
+                    <p>No results found.</p>
+                )}
             </div>
         </div>
     );

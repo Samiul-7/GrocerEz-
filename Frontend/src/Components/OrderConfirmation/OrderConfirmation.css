@@ -1,0 +1,25 @@
+/* OrderConfirmation.css */
+
+.order-confirmation {
+    text-align: center;
+    padding: 50px;
+  }
+  
+  .order-confirmation h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+  
+  .order-confirmation button {
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .order-confirmation button:hover {
+    background-color: #0056b3;
+  }
