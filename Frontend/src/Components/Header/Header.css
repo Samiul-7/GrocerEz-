@@ -38,7 +38,7 @@
 
 .header-contents button {
     border: none;
-    color: #ffffff;
+    color: #0a0a0a;
     font-weight: 600;
     padding: 1vw 2.3vw;
     background-color: #00ff55; /* Changed color for better contrast */
@@ -50,7 +50,7 @@
 
 .header-contents button:hover {
     background-color: #07cc00; /* Darker shade on hover */
-    color: #ffffff;
+    color: #070707;
 }
 
 @media(max-width:1050px){
