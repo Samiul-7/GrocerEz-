@@ -1,41 +1,41 @@
-import React, { useContext } from 'react'
-import './Cart.css'
-import { StoreContext } from '../../context/StoreContext'
-import { useNavigate } from 'react-router-dom'
-// import { food_list } from '../../assets/image'
+import React, { useContext } from 'react';
+import './Cart.css';
+import { StoreContext } from '../../context/StoreContext';
+import { useNavigate } from 'react-router-dom';
+
 const Cart = () => {
-  const { cartItems, food_list, removeFromCart,getTotalCartAmount,url } = useContext(StoreContext)
+  const { cartItems, food_list, removeFromCart, getTotalCartAmount, url } = useContext(StoreContext);
   const navigate = useNavigate();
+
   return (
     <div className='cart'>
       <div className='cart-items'>
         <div className="cart-items-title">
-          <p>Items</p>
+          <p>Image</p>
           <p>Title</p>
           <p>Price</p>
           <p>Quantity</p>
           <p>Total</p>
           <p>Remove</p>
         </div>
-        <br />
         <hr />
-        {/* #############################################################shob food_list er jaiagai All_products use korte hobe######################################### */}
-        {food_list.map((item, index) => {
+        {food_list.map((item) => {
           if (cartItems[item._id] > 0) {
             return (
-              <div>
-                <div className="cart-items-title cart-items-item" >
-                  <img src={url+"/images/"+item.image} alt="" />
+              <div key={item._id}>
+                <div className="cart-items-title cart-items-item">
+                  <img src={item.image} alt={item.name} className="cart-item-image" />
                   <p>{item.name}</p>
-                  <p>{item.price}</p>
+                  <p>{item.price} Tk</p>
                   <p>{cartItems[item._id]}</p>
-                  <p>{item.price * cartItems[item._id]}Tk</p>
+                  <p>{item.price * cartItems[item._id]} Tk</p>
                   <p onClick={() => removeFromCart(item._id)} className='cross'>x</p>
                 </div>
                 <hr />
               </div>
-            )
+            );
           }
+          return null;
         })}
       </div>
       <div className='cart-bottom'>
@@ -48,17 +48,18 @@ const Cart = () => {
             </div>
             <div className="cart-total-details">
               <p>Delivery</p>
-              <p>{getTotalCartAmount()===0?0:2} Tk</p>
+              <p>{getTotalCartAmount() === 0 ? 0 : 2} Tk</p>
             </div>
             <div className="cart-total-details">
               <b>Total</b>
-              <b>{getTotalCartAmount()===0?0:getTotalCartAmount()+2} Tk</b>
+              <b>{getTotalCartAmount() === 0 ? 0 : getTotalCartAmount() + 2} Tk</b>
             </div>
           </div>
-          <button onClick={()=>navigate('/order')}>PROCEED TO CHECKOUT</button>
+          <button onClick={() => navigate('/order')}>PROCEED TO CHECKOUT</button>
         </div>
       </div>
     </div>
-  )
-}
-export default Cart
+  );
+};
+
+export default Cart;
