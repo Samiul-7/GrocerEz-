@@ -33,8 +33,12 @@ const Navbar = ({setShowLogin}) => {
     };
 
     const handleCartClick = () => {
-        navigate('/cart');
-      };
+        if (token) {
+            navigate('/cart');  
+        } else {
+            setShowLogin(true); 
+        }
+    };
 
     return (
         <div className='navbar'>
